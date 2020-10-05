@@ -1,6 +1,17 @@
 name: Grow
 on:
-  gollum
+  repository_dispatch:
+  release:
+    types: published
+  push:
+    branches:
+      - main
+    paths:
+      - 'config/x86_64.config'
+  schedule:
+    - cron: 0 4 * * 5
+  watch:
+    types: started
 jobs:
   downloading:
     runs-on: ubuntu-latest
