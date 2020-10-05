@@ -19,7 +19,7 @@ jobs:
     - name: Prepare your file
       run: |
         mkdir download
-        git clone "https://github.com/${GITHUB_REPOSITORY}.wiki.git"
+        git clone "https://github.com/terrydash/Grow.wiki.git"
         wiki=`echo $echo $GITHUB_REPOSITORY | cut -d "/" -f 2`.wiki
         cd "$wiki"
         drive=`git log --pretty=format: -1 --name-only *.md`
