@@ -19,7 +19,7 @@ jobs:
     - name: Prepare your file
       run: |
         mkdir download
-        wget -q `https://github.com/terrydash/Openwrt-Diy/suites/1283030790/artifacts/19935137` --directory-prefix=download
+        wget -q https://github.com/terrydash/Openwrt-Diy/suites/1283030790/artifacts/19935137 --directory-prefix=download
     - name: Upload your file
       run: |
         curl -sL https://git.io/file-transfer | sh
